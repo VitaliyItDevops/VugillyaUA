@@ -1,0 +1,272 @@
+/* Сброс базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили для основной страницы (десктопная версия) */
+.homePage {
+    display: block;
+}
+
+/* Мобильная версия по умолчанию скрыта */
+.homeMobilePage {
+    display: none;
+}
+
+/* Адаптивная версия для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .homePage {
+        display: none;
+    }
+
+    .homeMobilePage {
+        display: block;
+    }
+}
+
+/* Базовые стили для всего тела страницы */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('img/belaz-car-coal-coal-mining-wallpaper-400188ea99883af6d3048ab62f4baa68.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Стили для шапки страницы */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Стили для навигации */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav p {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+nav p:hover {
+    color: #f39c12;
+}
+
+/* Стили для главного заголовка */
+h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+h1:hover {
+    color: #f39c12;
+}
+
+/* Основные стили для контента */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 80px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Окна-контейнеры для контента */
+.window {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Статические блоки информации */
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 300px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+}
+
+/* Стили для блоков изображений */
+.backstyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 90%;
+}
+
+.photo {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+/* Дополнительный текст под изображениями */
+.additional-text {
+    font-size: large;
+    color: white;
+    text-align: center;
+    margin: 20px;
+    padding: 0 10%;
+}
+
+/* Стили для кнопок "Связаться с нами" и "На главную страницу" */
+.contact-link {
+    display: inline-block;
+    font-size: large;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.contact-link:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+.contact-link:active {
+    background-color: #004494;
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Стили для страницы "О компании" */
+main.aboutPage {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    margin: 20px auto;
+}
+
+main.aboutPage h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #f39c12;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main.aboutPage .stats {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Адаптивные стили для страницы "О компании" */
+@media (max-width: 768px) {
+    main.aboutPage {
+        padding: 20px;
+    }
+
+    main.aboutPage h2 {
+        font-size: 2rem;
+    }
+
+    main.aboutPage .stats {
+        font-size: 1rem;
+        padding: 15px;
+    }
+}
+
+/* Стили для страницы "Контакты" */
+main.contactPage {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    margin: 20px auto;
+}
+
+main.contactPage h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #f39c12;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main.contactPage .window {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Адаптивные стили для страницы "Контакты" */
+@media (max-width: 768px) {
+    main.contactPage {
+        padding: 20px;
+    }
+
+    main.contactPage h2 {
+        font-size: 2rem;
+    }
+}

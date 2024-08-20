@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ugol DP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const homeLink = document.getElementById("homeLink");
+    const contactLink = document.getElementById("contactLink");
+    const aboutLink = document.getElementById("aboutLink");
+    const contactUs1 = document.getElementById("contactUs1");
+    const contactUs2 = document.getElementById("contactUs2");
+    const contactUs3 = document.getElementById("contactUs3");
+    const goHome = document.getElementById("goHome");
+
+    const homePageDesktop = document.querySelector(".homePage");
+    const homePageMobile = document.querySelector(".homeMobilePage");
+    const contactPage = document.querySelector(".contactPage");
+    const aboutPage = document.querySelector(".aboutPage");
+
+    // Функция для переключения видимости страниц
+    function showPage(pageToShow) {
+        homePageDesktop.style.display = "none";
+        homePageMobile.style.display = "none";
+        contactPage.style.display = "none";
+        aboutPage.style.display = "none";
+        pageToShow.style.display = "block"; // Отображаем нужную страницу
+    }
+
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+    // Переключение на страницу "Контакты"
+    contactLink.addEventListener("click", function () {
+        showPage(contactPage);
+    });
+
+    // Переключение на страницу "О нас"
+    aboutLink.addEventListener("click", function () {
+        showPage(aboutPage);
+    });
+
+    // Возврат на главную страницу
+    homeLink.addEventListener("click", function () {
+        if (isMobile()) {
+            showPage(homePageMobile);
+        } else {
+            showPage(homePageDesktop);
+        }
+    });
+
+    // Связаться с нами (переключение на страницу "Контакты")
+    contactUs1.addEventListener("click", function () {
+        showPage(contactPage);
+    });
+
+    contactUs2.addEventListener("click", function () {
+        showPage(contactPage);
+    });
+
+    contactUs3.addEventListener("click", function () {
+        showPage(contactPage);
+    });
+
+    // Возврат на главную страницу из раздела "Контакты"
+    goHome.addEventListener("click", function () {
+        if (isMobile()) {
+            showPage(homePageMobile);
+        } else {
+            showPage(homePageDesktop);
+        }
+    });
+
+    // Отображение правильной версии главной страницы при загрузке
+    if (isMobile()) {
+        showPage(homePageMobile);
+    } else {
+        showPage(homePageDesktop);
+    }
+
+    // Переключение между мобильной и десктопной версией при изменении размера окна
+    window.addEventListener("resize", function () {
+        if (isMobile()) {
+            showPage(homePageMobile);
+        } else {
+            showPage(homePageDesktop);
+        }
+    });
+});
+
+    </script>
+    <header>
+        <nav>
+            <p id="contactLink">Контакти</p>
+            <h1 id="homeLink">VugillyaUA</h1>
+            <p id="aboutLink">Про нас</p>
+        </nav>
+    </header>
+
+    <main class="homePage">
+        <div class="window">
+            <h2>Купити вугілля в Україні</h2>
+        </div>
+
+        <div class="window">
+            <div class="stats">
+                <p>Пропонуємо Вашій увазі ЗБАГАЧЕНЕ ВУГІЛЛЯ найвищої якості! 🔥</p>
+            </div>
+            <div class="stats">
+                <p>
+                    Показники:<br>
+                    Вологість: 8-10%<br>
+                    Зольність: 5-7%<br>
+                    Сірка: 1-1,5%<br>
+                    Теплота згорання: 6600&nbsp;-&nbsp;8100 ккал/кг
+                </p>                
+            </div>
+            <div class="stats">
+                <p>Фасоване, мішок 25кг.</p>
+            </div>
+        </div>
+
+        <div class="window">
+            <div class="backstyle">
+                <img class="photo" src="img/IMG_1331.PNG" alt="Уголь">
+                <img class="photo" src="img/IMG_1330.PNG" alt="Уголь">
+                <img class="photo" src="img/IMG_1329.PNG" alt="Уголь">
+            </div>
+        </div>
+
+        <!-- Добавленный текст под фото -->
+        <div class="window">
+            <p class="additional-text">
+                Наше вугілля - це високоякісний продукт, який підходить як для приватного, так і промислового використання. Ми пропонуємо конкурентні ціни та зручні умови доставки.
+            </p>
+            <p class="contact-link" id="contactUs1">Зв'язатися з нами</p>
+        </div>
+    </main>
+
+    <main class="homeMobilePage">
+        <div class="window">
+            <h2>Купити вугілля в Україні</h2>
+        </div>
+
+        <div class="window">
+            <div class="stats">
+                <p>Пропонуємо Вашій увазі ЗБАГАЧЕНЕ ВУГІЛЛЯ найвищої якості! 🔥</p>
+            </div>
+            <img class="photo" src="img/IMG_1331.PNG" alt="Уголь">
+
+            <div class="stats">
+                <p>
+                    Показники:<br>
+                    Вологість: 8-10%<br>
+                    Зольність: 5-7%<br>
+                    Сірка: 1-1,5%<br>
+                    Теплота згорання: 6600&nbsp;-&nbsp;8100 ккал/кг
+                </p>                
+            </div>
+            <img class="photo" src="img/IMG_1330.PNG" alt="Уголь">
+
+            <div class="stats">
+                <p>Фасоване, мішок 25кг.</p>
+            </div>
+            <img class="photo" src="img/IMG_1329.PNG" alt="Уголь">
+        </div>
+
+        <!-- Добавленный текст под фото -->
+        <div class="window">
+            <p class="additional-text">
+                Наше вугілля - це високоякісний продукт, який підходить як для приватного, так і промислового використання. Ми пропонуємо конкурентні ціни та зручні умови доставки.
+            </p>
+            <p class="contact-link" id="contactUs2">Зв'язатися з нами</p>
+        </div>
+    </main>
+
+    <main class="contactPage">
+        <div class="window">
+            <h2>Номер для замовлення</h2>
+            <div class="window">
+                <p>
+                    Номер для замовлення
+                    <a href="tel:+380730732121">+380-73-073-2121</a>
+                </p>
+                <p class="contact-link" id="goHome">На головну сторінку</p>
+            </div>
+        </div>
+    </main>
+
+    <main class="aboutPage">
+        <div class="window">
+            <h2>О компании</h2>
+            <div class="window">
+                <p>
+                    Вугілля UA — це підприємство, яке успішно впроваджує на ринку України сучасні системи постачання та забезпечує безперебійне постачання 
+                    вугільного палива для підприємств, комунальних служб та побутових споживачів. 
+                    <br><br>Ми сучасна компанія, яка постійно вдосконалює 
+                    умови співпраці із закупівлі вугілля для юридичних та фізичних осіб. Будемо раді вітати вас серед наших клієнтів!
+                    <br><br>Надсилаємо вугілля по всій Україні Новою поштою.
+                    <br><br>Для замовлення та уточнення інформації:
+                </p>
+                <p class="contact-link" id="contactUs3">Зв'язатися з нами</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
